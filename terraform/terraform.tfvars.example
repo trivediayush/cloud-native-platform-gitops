@@ -1,0 +1,11 @@
+aws_region      = "eu-west-2"
+project_name    = "cloud-native-platform"
+environment     = "dev"
+cluster_name    = "cloud-native-platform-eks-cluster"
+ecr_repository_name = "cloud-native-platform-app"
+
+# The Kubernetes API is private by default. Enable public access only when
+# needed, and restrict it to trusted public IPv4 CIDRs.
+cluster_endpoint_public_access = false
+# cluster_endpoint_public_access       = true
+# cluster_endpoint_public_access_cidrs = ["203.0.113.10/32"]
