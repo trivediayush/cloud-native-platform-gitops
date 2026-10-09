@@ -1,0 +1,21 @@
+﻿replicaCount: 2
+
+image:
+  repository: "902061578854.dkr.ecr.eu-west-2.amazonaws.com/cloud-native-platform-app"
+  tag: "97d78616542f601e04894ff2bbcd6ed71c042093"
+  pullPolicy: IfNotPresent
+
+containerPort: 8080
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 256Mi
