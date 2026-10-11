@@ -1,0 +1,21 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cloud-native-platform
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/trivediayush/cloud-native-platform-gitops.git
+    targetRevision: master
+    path: kubernetes/helm/cloud-native-platform-app
+    helm:
+      releaseName: cloud-native-platform
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: cloud-native-platform
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
