@@ -1,4 +1,4 @@
-﻿replicaCount: 2
+﻿replicaCount: 3
 
 image:
   repository: "902061578854.dkr.ecr.eu-west-2.amazonaws.com/cloud-native-platform-app"
