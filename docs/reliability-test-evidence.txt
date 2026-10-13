@@ -1,0 +1,15 @@
+Cloud-Native Platform — Reliability Test Evidence
+Date: 13 October 2026
+Region: eu-west-2 (London)
+
+Test: Kubernetes pod self-healing
+Action: Deleted one application pod manually.
+Expected result: Deployment controller recreates the pod.
+Observed result: Replacement pod reached 1/1 Running.
+Deployment recovery: 2/2 replicas available.
+Application check: Version 1.0.1, status running.
+Health check: healthy.
+Availability check: 60/60 HTTP 200 responses.
+HPA check: CPU 1%/70%; remained at 2 replicas.
+Result: Self-healing and basic application availability verified.
+Note: The sequential request test did not trigger autoscaling.
