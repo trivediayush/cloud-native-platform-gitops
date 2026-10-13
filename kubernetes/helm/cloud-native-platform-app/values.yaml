@@ -2,7 +2,7 @@
 
 image:
   repository: "902061578854.dkr.ecr.eu-west-2.amazonaws.com/cloud-native-platform-app"
-  tag: "97d78616542f601e04894ff2bbcd6ed71c042093"
+  tag: "3a45fea620449548ecedfa960f7aecffbe1f1766"
   pullPolicy: IfNotPresent
 
 containerPort: 8080
